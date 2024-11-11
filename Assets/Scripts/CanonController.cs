@@ -10,7 +10,14 @@ public class CanonController : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(C_Shoot());
+       // StartCoroutine(C_Shoot());
+    }
+    private void Update()
+    {
+        if (Input.GetMouseButton(1))
+        {
+            StartCoroutine(C_Shoot());
+        }
     }
 
     private IEnumerator C_Shoot()
